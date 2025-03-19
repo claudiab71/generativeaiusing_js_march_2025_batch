@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var con;
+        do{
+        var name = prompt("Enter the name")
+        var age = prompt("Enter the age")
+        var salary = eval(prompt("Enter the salary"))
+        var bonus = salary + salary * 0.1;
+        alert("Hello " + name + " you are " + age + " years old"+" and your salary is "+salary+" and your bonus is "+bonus);
+        con = confirm("Do you want to continue?");
+        }while(con);
+
+        alert("Thank you for using our service");
+    </script>
+</body>
+</html>

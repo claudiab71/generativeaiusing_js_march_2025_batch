@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num =[10,20,30,40,50]; // literal style array declaration
+        document.write(num+"<br/>")
+        // retrieve element using loop 
+        document.write("retrieve element using loop <br/>")
+        for(var i=0;i<num.length;i++){
+            document.write(num[i]+"<br/>")
+        }
+        // retrieve element using for in loop
+        document.write("retrieve element using for in loop <br/>")
+        for(var i in num){
+            document.write(num[i]+"<br/>")
+        }
+        // retrieve element using forEach function 
+        document.write("retrieve element using forEach function <br/>")
+        num.forEach(display);
+
+        function display(value,index){
+            document.write(value+" "+index+"<br/>")
+        }
+        document.write("<br/>")
+        num.forEach(function(value,index){
+            document.write(value+" "+index+"<br/>")
+        })
+        document.writeln("<br/>")
+        num.forEach((v,i)=>document.write(v+" "+i+"<br/>"))
+    </script>
+</body>
+</html>

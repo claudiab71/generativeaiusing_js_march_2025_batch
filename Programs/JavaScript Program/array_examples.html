@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var num1 =[10,20,30,40,50,60,70,80,90,100]; // literal style array declaration 
+    var num2 = new Array(10,20,30,40,50,60,70,80,90,100);// creating memory using new keyword 
+    document.write(num1+"<br/>")
+    document.write(num1[0]+"<br/>")
+    document.write(num1[1]+"<br/>")
+    num1.push(110); // adding element at the end of array
+    num1.push(120); // adding element at the end of array
+    num1.unshift(5); // adding element at the beginning of array
+    num1.unshift(3); // adding element at the beginning of array
+    document.write(num1+"<br/>")
+    num1.pop(); // removing element from the end of array
+    num1.shift(); // removing element from the beginning of array
+    document.write(num1+"<br/>")
+    //num1.splice(3,1); // removing element from the middle of array
+    // 3 index position, 0 element to delete and then add 200. 
+    num1.splice(3,0,200); // removing element from the middle of array and adding new element
+    document.write(num1+"<br/>")
+    </script>
+</body>
+</html>

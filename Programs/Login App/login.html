@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: red;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .toggle-link {
+            margin-top: 10px;
+            font-size: 14px;
+            color: rgb(157, 255, 0);
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.vodafone.de/media/img/icons/mid-render/New_VF_Icon_RGB_RED.svg" alt="Vodafone Logo" class="logo">
+        <h1>Login</h1>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button>Login</button>
+        <p><a href="signup.html" class="toggle-link">Don't have an account? Sign up</a></p>
+    </div>
+</body>
+</html>

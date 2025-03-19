@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //normal style function : no passing parameter and no return type. 
+        // function hello() {
+        //     alert("Welcome to user defined function");
+        // }
+        // hello();
+        // // function with passing parameter and no return type.
+        // function hello1(name) {
+        //     alert("Welcome to user defined function " + name);
+        // }
+        // hello1("John");
+        // hello1("Smith");
+        // hello1("Doe");
+        // // function with passing parameter and return type.
+        // function add(a,b) {
+        //     return a+b;
+        // }
+        // var sum = add(10,20);
+        // alert(sum);
+        // // expression style function 
+        // var hello2 = function() {
+        //     alert("Welcome to user defined function in expression style");
+        // }
+        // hello2(); 
+        // hello();
+        // function hello() {
+        //     alert("Welcome to user defined function - normal style");
+        // }
+        // hello();
+        // //hi();
+        // var hi = function() {
+        //     alert("Welcome to user defined function in expression style");
+        // }
+        // hi()
+        // normal style addition of two numbers 
+        // function add(a,b){
+        //     return a+b;
+        // }
+        // alert(add(10,20));
+        // // expression style addition of two numbers
+        // var add1 = function(a,b){
+        //     return a+b;
+        // }
+        // alert(add1(10,20));
+        // // addition of two number using arrow function arrow function return value without return keyword and without curly braces
+        // var add2 = (a,b) => a+b;
+        // alert(add2(10,20));
+        // var hello = ()=>alert("Welcome to user defined function in arrow function style");
+        // hello();
+        function greeting(fname,callback) {
+            return "Welcome "+callback(fname);
+        }
+
+        let maleInfo=(fname)=>"Mr "+fname;
+        
+        let femaleInfo = function(fname){
+            return "Ms "+fname;
+        }
+        document.write(greeting("John",maleInfo)+"<br>");
+        document.write(greeting("Leena",femaleInfo)+"<br>");
+        document.write(greeting("Steven",(fname)=>"Mr "+fname)+"<br>");
+        //document.write(greeting("Sara"));
+    </script>
+</body>
+</html>
