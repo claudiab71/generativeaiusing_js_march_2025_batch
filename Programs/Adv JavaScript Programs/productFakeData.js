@@ -4,46 +4,33 @@ function getProductDetails() {
         .then(products => {
             // Create a container div for styling
             const container = document.createElement("div");
-            container.style.display = "grid";
-            container.style.gridTemplateColumns = "repeat(auto-fit, minmax(200px, 1fr))";
-            container.style.gap = "20px";
-            container.style.padding = "20px";
+            container.className = "product-container";
 
             products.forEach(product => {
                 // Create a card for each product
                 const card = document.createElement("div");
-                card.style.border = "1px solid #ccc";
-                card.style.borderRadius = "8px";
-                card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-                card.style.padding = "16px";
-                card.style.textAlign = "center";
-                card.style.backgroundColor = "#fff";
+                card.className = "product-card";
 
                 // Product ID
                 const productId = document.createElement("p");
                 productId.textContent = `ID: ${product.id}`;
-                productId.style.fontWeight = "bold";
+                productId.className = "product-id";
 
                 // Product Title
                 const productTitle = document.createElement("h3");
                 productTitle.textContent = product.title;
-                productTitle.style.fontSize = "16px";
-                productTitle.style.margin = "10px 0";
+                productTitle.className = "product-title";
 
                 // Product Price
                 const productPrice = document.createElement("p");
                 productPrice.textContent = `Price: $${product.price}`;
-                productPrice.style.color = "#28a745";
-                productPrice.style.fontWeight = "bold";
+                productPrice.className = "product-price";
 
                 // Product Image
                 const productImage = document.createElement("img");
                 productImage.src = product.image;
                 productImage.alt = product.title;
-                productImage.style.width = "100px";
-                productImage.style.height = "100px";
-                productImage.style.objectFit = "contain";
-                productImage.style.marginBottom = "10px";
+                productImage.className = "product-image";
 
                 // Append elements to the card
                 card.appendChild(productImage);
