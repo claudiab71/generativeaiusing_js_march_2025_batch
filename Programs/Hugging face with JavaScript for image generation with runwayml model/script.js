@@ -1,5 +1,5 @@
 const API_URL = "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5";
-const API_TOKEN = "please write your token"; // Replace with your token
+const API_TOKEN = "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"; // Replace with your token
 
 async function generateImage() {
     const input = document.getElementById("inputText").value;
