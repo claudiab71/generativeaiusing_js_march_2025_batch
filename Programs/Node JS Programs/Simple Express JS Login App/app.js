@@ -66,7 +66,8 @@ app.post("/SignIn",myMiddlewareFun,(req, res)=> {
     let login = req.body;   // get the data from the form
     console.log(login);    // display data on console 
     if(login.username == "admin" && login.password == "admin") {
-        res.send("Login Success");
+        //res.send("Login Success");
+        res.sendFile
     }else {
         res.send("Login Fail");
     }
