@@ -8,8 +8,9 @@ exports.verifyToken = (req, res, next) => {
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
-      return res.status(401).json({ message: 'Unauthorized' });
+      return res.status(401).json({ message: 'Unauthorized - InValid token' });
     }
+    console.log('decoded', decoded);
     req.user = decoded; // Attach decoded token payload to the request
     next();
   });
@@ -17,7 +18,8 @@ exports.verifyToken = (req, res, next) => {
 
 exports.checkRole = (roles) => {
   return (req, res, next) => {
-    if (!roles.includes(req.user.role)) {
+    console.log('roles', req.user.userType);
+    if (!roles.includes(req.user.userType)) {
       return res.status(403).json({ message: 'Access denied' });
     }
     next();
